@@ -10,6 +10,7 @@ import LoginPage from '../pages/auth/LoginPage';
 import RegisterPage from '../pages/patient/RegisterPage';
 import TokenStatusPage from '../pages/patient/TokenStatusPage';
 import PublicDisplayPage from '../pages/display/PublicDisplayPage';
+import KioskPage from '../pages/patient/KioskPage';
 import TriageConsolePage from '../pages/nurse/TriageConsolePage';
 import StationPage from '../pages/doctor/StationPage';
 import DashboardPage from '../pages/admin/DashboardPage';
@@ -35,6 +36,12 @@ export const router = createBrowserRouter([
   {
     path: '/display/:deptId',
     element: <PublicDisplayPage />
+  },
+
+  // Public Patient Kiosk & Mobile Phone Simulator
+  {
+    path: '/kiosk',
+    element: <KioskPage />
   },
 
   // Nurse Routes

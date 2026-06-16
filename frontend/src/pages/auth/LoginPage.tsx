@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { Mail, Lock, Shield, Users, Stethoscope, Landmark, ToggleLeft, ToggleRight } from 'lucide-react';
+import { Mail, Lock, Shield, Users, Stethoscope, Landmark, ToggleLeft, ToggleRight, QrCode, ArrowRight } from 'lucide-react';
 import Button from '../../components/common/Button';
 import Input from '../../components/common/Input';
 import AppLogo from '../../components/common/AppLogo';
@@ -201,6 +201,25 @@ export const LoginPage: React.FC = () => {
               </div>
             </button>
           </div>
+        </Card>
+
+        {/* Patient Kiosk & Mobile Phone Simulator Launcher Card */}
+        <Card 
+          onClick={() => navigate('/kiosk')}
+          className="bg-gradient-to-r from-teal-500 to-emerald-600 border border-teal-400/25 shadow-xl p-4.5 rounded-3xl animate-slide-up [animation-delay:250ms] text-white flex items-center justify-between group cursor-pointer hover:shadow-2xl hover:scale-[1.01] transition-all"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="p-3.5 bg-white/10 rounded-2xl text-white group-hover:scale-105 transition-transform shrink-0 border border-white/10">
+              <QrCode size={22} className="animate-pulse" />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-sm font-black uppercase tracking-wider">Patient Self-Service Kiosk</span>
+              <span className="text-[10px] text-white/80 mt-0.5 leading-relaxed font-semibold">
+                Simulate mobile QR scanning, token registration, and wait-time tracking on screen
+              </span>
+            </div>
+          </div>
+          <ArrowRight size={18} className="text-white/80 group-hover:translate-x-1.5 transition-transform duration-300 ml-4 shrink-0" />
         </Card>
 
       </div>

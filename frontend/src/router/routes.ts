@@ -4,6 +4,7 @@ export const ROUTES = {
   REGISTER: '/register/:deptSlug',
   TOKEN_STATUS: '/token/:tokenId',
   DISPLAY: '/display/:deptId',
+  KIOSK: '/kiosk',
   
   // Nurse
   NURSE_TRIAGE: '/nurse/triage',
